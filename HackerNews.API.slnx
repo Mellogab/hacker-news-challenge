@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="HackerNews.API/HackerNews.API.csproj" />
+  <Project Path="HackerNews.Domain/HackerNews.Domain.csproj" />
+  <Project Path="HackerNews.Infrastructure/HackerNews.Infrastructure.csproj" />
+  <Project Path="HackerNews.Tests.Integration/HackerNews.Tests.Integration.csproj" />
+  <Project Path="HackerNews.Tests.Unit/HackerNews.Tests.Unit.csproj" />
+</Solution>
