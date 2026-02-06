@@ -73,6 +73,8 @@ dotnet test
 
 ## The Proposed Problem
 
+<img width="848" height="483" alt="image" src="https://github.com/user-attachments/assets/e07dc374-bd14-4965-98e4-aec366143708" />
+
 To figure out the right solution for this coding test, we need to first whats exactly the problem we have been facing. So. it seems that we have two parts: get the best stories id calling an external api and then for every id retrieved into the first endpoint, we need to execute the another one to get the details story given the story id.
 
 This a typical network task, which will be processed by the network adapter and we like to say as IO Bound. IO Bound are problems that involves IO like network, disk (hd, ssd), memory ram. They have physical parts into the machine responsible for processing the information and then return for who requested.
