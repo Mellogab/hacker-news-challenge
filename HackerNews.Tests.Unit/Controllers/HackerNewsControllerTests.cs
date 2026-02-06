@@ -46,7 +46,7 @@ public class HackerNewsControllerTests
             .ReturnsAsync(stories);
 
         // Act
-        var result = await _controller.GetBestStoriesAsync(10, CancellationToken.None);
+        var result = await _controller.GetBestStoriesAsync(storiesCount: 10, CancellationToken.None);
 
         // Assert
         var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
@@ -66,7 +66,7 @@ public class HackerNewsControllerTests
             .ThrowsAsync(new Exception("Something went wrong"));
 
         // Act
-        var result = await _controller.GetBestStoriesAsync(10, CancellationToken.None);
+        var result = await _controller.GetBestStoriesAsync(storiesCount: 10, CancellationToken.None);
 
         // Assert
         var statusResult = result.Should().BeOfType<ObjectResult>().Subject;
@@ -84,7 +84,7 @@ public class HackerNewsControllerTests
             .ReturnsAsync(emptyStories);
 
         // Act
-        var result = await _controller.GetBestStoriesAsync(10, CancellationToken.None);
+        var result = await _controller.GetBestStoriesAsync(storiesCount: 10, CancellationToken.None);
 
         // Assert
         var okResult = result.Should().BeOfType<OkObjectResult>().Subject;

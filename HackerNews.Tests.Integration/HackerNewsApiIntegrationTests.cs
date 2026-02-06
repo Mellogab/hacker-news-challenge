@@ -19,7 +19,7 @@ public class HackerNewsApiIntegrationTests : IClassFixture<WebApplicationFactory
     public async Task GetBestStories_ShouldReturn200()
     {
         // Act
-        var response = await _client.GetAsync("/api/hackernews/border-flow?n=5");
+        var response = await _client.GetAsync("/api/hackernews/best-stories?storiesCount=5");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -30,7 +30,7 @@ public class HackerNewsApiIntegrationTests : IClassFixture<WebApplicationFactory
     public async Task GetBestStories_ResponseShouldBeValidJsonArray()
     {
         // Act
-        var response = await _client.GetAsync("/api/hackernews/border-flow?n=5");
+        var response = await _client.GetAsync("/api/hackernews/best-stories?storiesCount=5");
         var content = await response.Content.ReadAsStringAsync();
 
         // Assert
@@ -45,7 +45,7 @@ public class HackerNewsApiIntegrationTests : IClassFixture<WebApplicationFactory
     public async Task GetBestStories_EachStoryShouldHaveExpectedFields()
     {
         // Act
-        var response = await _client.GetAsync("/api/hackernews/border-flow?n=5");
+        var response = await _client.GetAsync("/api/hackernews/best-stories?storiesCount=5");
         var content = await response.Content.ReadAsStringAsync();
 
         // Assert
@@ -63,7 +63,7 @@ public class HackerNewsApiIntegrationTests : IClassFixture<WebApplicationFactory
     public async Task GetBestStories_ScoreShouldBePositiveInteger()
     {
         // Act
-        var response = await _client.GetAsync("/api/hackernews/border-flow?n=5");
+        var response = await _client.GetAsync("/api/hackernews/best-stories?storiesCount=5");
         var content = await response.Content.ReadAsStringAsync();
 
         // Assert
@@ -79,7 +79,7 @@ public class HackerNewsApiIntegrationTests : IClassFixture<WebApplicationFactory
     public async Task GetBestStories_TimeShouldBeValidDateTimeString()
     {
         // Act
-        var response = await _client.GetAsync("/api/hackernews/border-flow?n=5");
+        var response = await _client.GetAsync("/api/hackernews/best-stories?storiesCount=5");
         var content = await response.Content.ReadAsStringAsync();
 
         // Assert
