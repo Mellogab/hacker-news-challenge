@@ -24,11 +24,6 @@ public static class ServiceCollectionExtensions
             options.Retry.Delay = TimeSpan.FromMilliseconds(500);
             options.Retry.BackoffType = DelayBackoffType.Exponential;
 
-            //TO DO: This three config values should be moved to appsettings.json
-            options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(30);
-            options.CircuitBreaker.FailureRatio = 0.5;
-            options.CircuitBreaker.MinimumThroughput = 10;
-
             //TO DO: This config values should be moved to appsettings.json
             options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(10);
         });
