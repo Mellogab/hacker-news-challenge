@@ -33,10 +33,8 @@ public class GetBestStoriesQueryHandler(
                 .AsReadOnly();
         }
 
-        IEnumerable<int> storiesIds;
-
         logger.LogInformation("Searching story ids");
-        storiesIds = await hackerNewsService.GetBestStoriesIdsAsync(ct);
+        var storiesIds = await hackerNewsService.GetBestStoriesIdsAsync(ct);
 
         if (!storiesIds.Any())
         {
