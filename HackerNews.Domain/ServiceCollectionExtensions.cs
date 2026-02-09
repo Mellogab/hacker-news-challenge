@@ -6,7 +6,7 @@ namespace Microsoft.Extensions.DependencyInjection;
 public static class ServiceCollectionExtensions
 {
     /// <summary>
-    /// Adds Affiliate Central Core services to the dependency injection container
+    /// Adds Hacker News Core services to the dependency injection container
     /// </summary>
     /// <param name="services">The service collection to add services to</param>
     /// <param name="config">Optional configuration action for core services</param>
